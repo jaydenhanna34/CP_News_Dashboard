@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumer Products News & Trends — August 26, 2026</title>
+<style>
+  :root{
+    --ap-navy:#032E45;
+    --ap-dark-teal:#006176;
+    --ap-mid-teal:#0696A6;
+    --ap-light-teal:#77B0BE;
+    --ap-bg:#FFFFFF;
+    --ap-panel:#F4F6F9;
+    --ap-card:#FFFFFF;
+    --ap-text:#1A1A2E;
+    --ap-muted:#6B7280;
+    --ap-faint:#9CA3AF;
+    --ap-border:#E5E7EB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{height:100%;}
+  body{display:flex;background:var(--ap-bg);font-family:'Segoe UI',Arial,sans-serif;color:var(--ap-text);font-size:14px;line-height:1.6;height:100vh;overflow:hidden;}
+
+  /* Sidebar */
+  .sidebar{width:230px;background:var(--ap-navy);padding:22px 0;flex-shrink:0;height:100vh;overflow-y:auto;}
+  .sidebar .logo{padding:0 20px 18px;border-bottom:1px solid rgba(255,255,255,0.12);margin-bottom:14px;}
+  .logo-title{color:#fff;font-size:13px;font-weight:700;letter-spacing:.02em;}
+  .logo-sub{color:rgba(255,255,255,0.5);font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-top:4px;}
+  .nav-section{padding:10px 20px 4px;color:rgba(255,255,255,0.32);font-size:9px;text-transform:uppercase;letter-spacing:.13em;font-weight:700;}
+  .nav-link{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;padding:9px 20px;
+    color:rgba(255,255,255,0.68);font-size:12.5px;text-decoration:none;border-left:3px solid transparent;
+    background:none;border-top:none;border-right:none;border-bottom:none;cursor:pointer;font-family:inherit;transition:all .15s ease;}
+  .nav-link:hover{color:#fff;background:rgba(255,255,255,0.06);border-left-color:var(--ap-mid-teal);}
+  .nav-link.active{color:#fff;background:rgba(6,150,166,0.16);border-left-color:var(--ap-mid-teal);font-weight:600;}
+  .nav-link .cnt{font-size:10px;color:rgba(255,255,255,0.55);background:rgba(255,255,255,0.10);border-radius:9px;padding:1px 8px;font-weight:600;}
+  .nav-link.active .cnt{color:#fff;background:var(--ap-mid-teal);}
+  .nav-foot{padding:16px 20px;margin-top:10px;border-top:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.4);font-size:10px;line-height:1.7;}
+  .nav-foot b{color:rgba(255,255,255,0.7);}
+
+  /* Content */
+  .content{flex:1;height:100vh;overflow-y:auto;padding:22px 26px 30px;}
+  .brief-header{background:var(--ap-navy);color:#fff;padding:24px 30px;border-radius:6px;margin-bottom:20px;}
+  .bh-title{font-size:26px;font-weight:800;letter-spacing:-.01em;margin-bottom:8px;}
+  .bh-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px;}
+  .bh-tag{font-size:11px;background:rgba(255,255,255,0.12);border-radius:3px;padding:3px 10px;}
+  .bh-aud{font-size:11px;font-weight:700;border-radius:3px;padding:3px 10px;text-transform:uppercase;letter-spacing:.08em;background:rgba(255,255,255,0.12);}
+  .bh-context{font-size:12.5px;color:rgba(255,255,255,0.78);border-left:3px solid var(--ap-mid-teal);padding-left:12px;font-style:italic;}
+
+  .section-head{display:flex;align-items:center;gap:12px;margin:4px 0 18px;}
+  .section-head h2{font-size:16px;font-weight:700;color:var(--ap-navy);white-space:nowrap;text-transform:uppercase;letter-spacing:.03em;}
+  .section-head .kick{font-size:11px;color:var(--ap-muted);white-space:nowrap;}
+  .section-head .line{flex:1;height:1px;background:var(--ap-border);}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px;}
+  .panel{display:none;}
+  .panel.active{display:block;}
+
+  a.card{display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--ap-card);
+    border:1px solid var(--ap-border);border-left:4px solid var(--ap-light-teal);border-radius:6px;padding:15px 17px 13px;
+    min-height:150px;box-shadow:0 1px 4px rgba(0,0,0,0.04);transition:box-shadow .15s ease,transform .15s ease,border-color .15s ease;}
+  a.card:hover{box-shadow:0 5px 16px rgba(3,46,69,0.13);transform:translateY(-2px);border-left-color:var(--ap-mid-teal);}
+  a.card:focus-visible{outline:2px solid var(--ap-mid-teal);outline-offset:2px;}
+
+  a.card.top{grid-column:1 / -1;background:var(--ap-navy);border:1px solid var(--ap-navy);border-left:4px solid var(--ap-mid-teal);min-height:auto;}
+  a.card.top:hover{box-shadow:0 6px 20px rgba(3,46,69,0.28);}
+  a.card.top .summary{color:#fff;font-size:16px;font-weight:500;line-height:1.42;max-width:78ch;}
+  a.card.top .entity{color:var(--ap-light-teal);}
+  a.card.top .source{color:rgba(255,255,255,0.55);}
+  a.card.top .card-foot{border-top-color:rgba(255,255,255,0.16);}
+  a.card.top .readmore{color:var(--ap-light-teal);}
+
+  .ribbon{display:inline-block;align-self:flex-start;font-size:9.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+    color:#fff;background:var(--ap-mid-teal);border-radius:3px;padding:3px 10px;margin-bottom:11px;}
+  .card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;}
+  .tag{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ap-dark-teal);
+    background:rgba(6,150,166,0.10);border:1px solid rgba(6,150,166,0.28);border-radius:3px;padding:2px 8px;}
+  a.card.top .tag{color:#fff;background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.28);}
+  .date{font-size:11px;color:var(--ap-faint);font-weight:600;display:flex;align-items:center;gap:6px;white-space:nowrap;}
+  .date.new{color:var(--ap-dark-teal);}
+  .date.new::before{content:"NEW";font-size:8px;font-weight:800;letter-spacing:.08em;color:#fff;background:var(--ap-mid-teal);border-radius:2px;padding:1px 4px;}
+  a.card.top .date{color:rgba(255,255,255,0.6);}
+  .entity{font-size:10.5px;letter-spacing:.04em;color:var(--ap-muted);text-transform:uppercase;font-weight:600;margin-bottom:6px;}
+  .summary{font-size:13.5px;line-height:1.46;color:var(--ap-text);margin:0 0 auto;}
+  .card-foot{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid var(--ap-border);}
+  .source{font-size:10px;color:var(--ap-muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .readmore{font-size:11px;font-weight:700;color:var(--ap-mid-teal);white-space:nowrap;}
+  a.card:hover .readmore{color:var(--ap-dark-teal);}
+
+  @media (max-width:760px){
+    body{flex-direction:column;height:auto;overflow:auto;}
+    .sidebar{width:100%;height:auto;position:static;display:flex;flex-wrap:wrap;padding:12px;}
+    .sidebar .logo{width:100%;}
+    .nav-section,.nav-foot{display:none;}
+    .nav-link{width:auto;border-left:none;border-bottom:3px solid transparent;}
+    .content{height:auto;overflow:visible;}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;}}
+</style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Subsectors">
+    <div class="logo">
+      <div class="logo-title">AlixPartners · BI</div>
+      <div class="logo-sub">Consumer Products Daily Wire</div>
+    </div>
+    <div class="nav-section">Subsectors</div>
+    <div id="navlinks"></div>
+    <div class="nav-foot">
+      <b>Daily brief.</b> Freshest stories lead each list; recent notable-company earnings included for context. Free-to-read sources only — paywalled outlets excluded.
+    </div>
+  </nav>
+
+  <main class="content">
+    <div class="brief-header">
+      <div class="bh-title">Consumer Products News &amp; Trends</div>
+      <div class="bh-meta">
+        <span class="bh-aud">Daily Brief</span>
+        <span class="bh-tag">August 26, 2026</span>
+        <span class="bh-tag">5 subsectors</span>
+        <span class="bh-tag" id="totaltag">— stories</span>
+      </div>
+      <div class="bh-context">Newest items (flagged NEW) reflect the last ~24 hours; older entries are recent notable-company earnings and developments carried for context where the day's wire was quiet.</div>
+    </div>
+    <div id="panels"></div>
+  </main>
+
+<script>
+const SUBSECTORS=[
+  {id:"food",label:"Food"},
+  {id:"beverage",label:"Beverage"},
+  {id:"beauty",label:"Health & Beauty"},
+  {id:"household",label:"Household/Outdoor/Durables"},
+  {id:"electronics",label:"Electronics & Apparel/Accessories"},
+];
+
+const NEWS={
+  food:[
+    {top:true,new:true,tag:"Trade / Tariffs",date:"Aug 25",entity:"US–Canada · Dairy & Food",
+     summary:"Canada moved to impose retaliatory tariffs on roughly $20B of US goods — including dairy and other foods at 15–50%, effective Sept 8 — after Washington added new 50% duties, pressuring US consumer-staples names.",
+     source:"CNBC",url:"https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html"},
+    {new:true,tag:"Food Safety",date:"Aug 26",entity:"FDA / USDA FSIS",
+     summary:"Federal regulators refreshed their active recall lists, with newly posted USDA FSIS actions covering contamination and undeclared-allergen risks across meat and prepared-food products.",
+     source:"USDA FSIS",url:"https://www.fsis.usda.gov/recalls"},
+    {new:true,tag:"Earnings",date:"Aug 26",entity:"Innovative Food Holdings (IVFH)",
+     summary:"Specialty gourmet-foods seller Innovative Food Holdings hosts its Q2 2026 earnings call today, one of the few food names reporting during the late-August lull.",
+     source:"GlobeNewswire",url:"https://www.globenewswire.com/news-release/2026/08/20/3348857/0/en/innovative-food-holdings-inc-announces-second-quarter-2026-earnings-call.html"},
+    {new:true,tag:"Product",date:"Aug 25",entity:"Hershey (HSY)",
+     summary:"Hershey rolled out its 2026 Halloween candy lineup to stores nationwide, kicking off the confectionery calendar's most important seasonal window.",
+     source:"Brand Eating",url:"https://www.brandeating.com/2026/"},
+    {new:true,tag:"Sector",date:"Aug 25",entity:"CPG Legal",
+     summary:"Beverage-focused firm Malkin Law launched a dedicated food & beverage CPG practice for natural, better-for-you and functional brands — a small read on where deal and regulatory activity is heading.",
+     source:"BevNET",url:"https://www.bevnet.com/pr/2026/08/25/malkin-law-pa-launches-food-and-beverage-cpg-law-practice"},
+    {tag:"Earnings",date:"Aug 5",entity:"Kraft Heinz (KHC)",
+     summary:"Kraft Heinz beat Q2 sales estimates and raised its full-year forecast, crediting CEO Steve Cahillane's turnaround push into protein-heavy foods and heavier marketing, with $700M of incremental 2026 investment.",
+     source:"Reuters via Yahoo",url:"https://finance.yahoo.com/markets/stocks/articles/kraft-heinz-q2-2026-earnings-123545495.html"},
+    {tag:"Restructuring",date:"Aug 13",entity:"Tyson Foods (TSN)",
+     summary:"Tyson is consolidating its beef business around three central-US plants and closing facilities in Joslin, Illinois and Eagle Mountain, Utah as a historic cattle shortage squeezes the segment.",
+     source:"Tyson via SEC",url:"https://www.sec.gov/Archives/edgar/data/0000100493/000010049326000063/tsn2026pressreleasedatedau.htm"},
+    {tag:"Earnings",date:"Aug 11",entity:"Smithfield Foods (SFD)",
+     summary:"Smithfield posted record first-half fiscal 2026 operating profit on its vertically integrated model and updated its full-year outlook to reflect the macro environment.",
+     source:"Smithfield via SEC",url:"https://www.sec.gov/Archives/edgar/data/0000091388/000009138826000052/q22026pressrelease.htm"},
+    {tag:"Exec Change",date:"Aug 5",entity:"B&G Foods (BGS)",
+     summary:"B&G Foods said CEO Casey Keller will retire after five years, with a successor already selected from another public company but not yet publicly named.",
+     source:"B&G via SEC",url:"https://www.sec.gov/Archives/edgar/data/0001278027/000110465926094128/tm2622795d1_ex99-1.htm"},
+    {tag:"Earnings",date:"Aug 5",entity:"J&J Snack Foods (JJSF)",
+     summary:"SuperPretzel and ICEE maker J&J Snack Foods reported Q2 results and business outlook, a read on foodservice and frozen-beverage demand heading into the fall.",
+     source:"J&J via SEC",url:"https://www.sec.gov/Archives/edgar/data/0000785956/000143774926025782/ex_998849.htm"},
+  ],
+  beverage:[
+    {top:true,new:true,tag:"Category Data",date:"Aug 25",entity:"Craft Beer · Circana",
+     summary:"A new Circana report shows craft beer's summer slump deepening as volume declines accelerated through August — the day's most-cited beverage read and another signal of segment pressure.",
+     source:"BevNET",url:"https://www.bevnet.com/"},
+    {new:true,tag:"Product",date:"Aug 25",entity:"Boston Beer (SAM)",
+     summary:"Boston Beer is launching Rally Dog, a spiked sports drink, across four states — pushing further into the hydration-meets-alcohol white space.",
+     source:"BevNET",url:"https://www.bevnet.com/"},
+    {new:true,tag:"Product",date:"Aug 25",entity:"McDonald's · Red Bull",
+     summary:"McDonald's added its first energy drink, a Red Bull Dragonberry Energizer, expanding its crafted-beverage and Refreshers platform in the intensifying c-store/QSR drink battle.",
+     source:"Brand Eating",url:"https://www.brandeating.com/2026/"},
+    {new:true,tag:"Trade / Tariffs",date:"Aug 25",entity:"US–Canada · Alcohol",
+     summary:"Canada's newly announced retaliatory tariff slate targets US alcohol among 700-plus goods, adding cross-border cost pressure for spirits and beer exporters heading into fall.",
+     source:"CNBC",url:"https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html"},
+    {new:true,tag:"Trend",date:"Aug 25",entity:"RTD Cocktails",
+     summary:"Fresh data reinforced that ready-to-drink cocktails carry the highest price-per-serve yet grow fastest, continuing to rewrite premiumization assumptions in bev-alc.",
+     source:"BevNET",url:"https://www.bevnet.com/"},
+    {tag:"Product",date:"Aug 24",entity:"Wiz Khalifa · Scofflaw",
+     summary:"Wiz Khalifa entered the fast-growing hemp-THC beverage category via a partnership with Scofflaw, the latest celebrity-backed push into intoxicating drinks.",
+     source:"BevNET",url:"https://www.bevnet.com/"},
+    {tag:"M&A",date:"Aug 21",entity:"Sazerac · Au Vodka",
+     summary:"Fireball owner Sazerac signed a binding deal to acquire Au Vodka, a top-selling UK RTD vodka brand, in its largest push yet into the UK market and latest in a two-year buying spree.",
+     source:"BevNET",url:"https://www.bevnet.com/category/news/spirits/"},
+    {tag:"Restructuring",date:"Aug 20",entity:"Diageo (DEO)",
+     summary:"Diageo confirmed it cut more than 1,900 jobs in FY26, with roughly 90% of the restructuring expected to be complete by September as the spirits giant streamlines costs.",
+     source:"BevNET",url:"https://www.bevnet.com/pr/2026/07"},
+    {tag:"Earnings",date:"Aug 6",entity:"Monster Beverage (MNST)",
+     summary:"Monster Beverage reported Q2 results for the period ended June 30 and released Q2 retail scanner data, a key read on the energy-drink category amid intensifying competition from Celsius.",
+     source:"Monster via SEC",url:"https://www.sec.gov/Archives/edgar/data/0000865752/000110465926092046/tm2622396d1_8k.htm"},
+    {tag:"Earnings",date:"Aug 4",entity:"National Beverage (FIZZ)",
+     summary:"LaCroix maker National Beverage reported quarterly net sales slightly below the prior year but with a year-over-year margin improvement, a read on the sparkling-water category.",
+     source:"BevNET",url:"https://www.bevnet.com/category/news/"},
+  ],
+  beauty:[
+    {top:true,tag:"Earnings",date:"Aug 19",entity:"Estée Lauder (EL)",
+     summary:"The day's defining recent beauty read: Estée Lauder returned to growth in fiscal 2026 — organic sales up ~3% to $15.0B and adjusted EPS up 66% to $2.51 — and guided FY27 organic growth of 3–5% as its 'Beauty Reimagined' turnaround takes hold.",
+     source:"Playbook of Beauty",url:"https://playbookofbeauty.com/august-17th-2026-week-beauty-news/"},
+    {new:true,tag:"Earnings Ahead",date:"Aug 27",entity:"Ulta Beauty (ULTA)",
+     summary:"Ulta Beauty reports Q2 results Thursday, with consensus near $6.19 EPS (up ~7% YoY); investors are watching its Bath & Body Works rollout and the wind-down of the Target partnership.",
+     source:"Zacks via Yahoo",url:"https://finance.yahoo.com/markets/stocks/articles/ulta-beauty-ulta-earnings-expected-140002195.html"},
+    {new:true,tag:"Earnings Ahead",date:"Aug 27",entity:"Bath & Body Works (BBWI)",
+     summary:"Bath & Body Works is also due to report this week, with consensus pointing to a softer quarter (EPS ~$0.24, down ~35% YoY) amid ongoing demand headwinds in body care and home fragrance.",
+     source:"Zacks via Yahoo",url:"https://finance.yahoo.com/markets/stocks/articles/ulta-beauty-ulta-earnings-expected-140002195.html"},
+    {tag:"Earnings",date:"Aug 17",entity:"Coty (COTY)",
+     summary:"Coty reported fiscal 2026 like-for-like sales down 5% and adjusted EBITDA off 22%, though Q4 returned to reported growth as prestige cosmetics improved — a laggard read against ELC's recovery.",
+     source:"Playbook of Beauty",url:"https://playbookofbeauty.com/august-17th-2026-week-beauty-news/"},
+    {tag:"Trend",date:"Aug 21",entity:"Nestlé",
+     summary:"Nestlé is targeting the fast-growing GLP-1 user base with new nutrition and 'beauty-from-within' products, deepening the crossover between wellness, food and beauty.",
+     source:"Global Cosmetics News",url:"https://www.globalcosmeticsnews.com/global-cosmetics-news-weekly-review-week-34-august-2026/"},
+    {tag:"R&D",date:"Aug 18",entity:"L'Oréal x NUS",
+     summary:"L'Oréal and Singapore's NUS Medicine launched a multi-year partnership studying whether visible skin changes can serve as clues to the body's broader biological aging.",
+     source:"CEW",url:"https://cew.org/beauty_news/beautys-top-headlines-august-18-2026/"},
+  ],
+  household:[
+    {top:true,new:true,tag:"Earnings",date:"Aug 25",entity:"DICK'S Sporting Goods (DKS)",
+     summary:"DICK'S missed Q2 estimates and cut full-year guidance as a weak athletic-footwear market dragged on newly acquired Foot Locker, sending shares down as much as ~30% — the most-covered CP-adjacent story of the day and a key outdoor/sporting-goods demand signal.",
+     source:"CNBC",url:"https://www.cnbc.com/2026/08/25/dicks-sporting-goods-dks-earnings-q2-2026.html"},
+    {new:true,tag:"Capital",date:"Aug 25",entity:"Newell Brands (NWL)",
+     summary:"Newell Brands declared a $0.07 quarterly cash dividend with an ex-date of August 31, as the Rubbermaid-to-Sharpie owner continues its portfolio turnaround.",
+     source:"Yahoo Finance",url:"https://finance.yahoo.com/quote/NWL/"},
+    {tag:"M&A",date:"Aug 4",entity:"Kimberly-Clark / Kenvue",
+     summary:"Kimberly-Clark reaffirmed that its pending $48.7B acquisition of consumer-health giant Kenvue remains on track to close by year-end, a deal set to reshape personal care and OTC health.",
+     source:"K-C via SEC",url:"https://www.sec.gov/Archives/edgar/data/0000055785/000162828026052113/kmbq22026ex-991.htm"},
+    {tag:"Guidance",date:"Aug 8",entity:"SharkNinja (SN)",
+     summary:"SharkNinja materially raised its 2026 outlook — now guiding net sales growth of 16–17% — after a Q2 beat driven by faster international expansion, though tariffs keep pressuring margins.",
+     source:"Yahoo / Zacks",url:"https://finance.yahoo.com/markets/stocks/articles/sn-raises-2026-outlook-international-145100979.html"},
+    {tag:"Earnings",date:"Aug 7",entity:"Solo Brands (SBDS)",
+     summary:"Solo Brands narrowed its Q2 loss even as sales slipped, and signed Hectic — a distributor previously tied to YETI — to accelerate growth across Europe and the UK.",
+     source:"Yahoo / Investing",url:"https://finance.yahoo.com/markets/stocks/articles/solo-brands-inc-q2-2026-205151679.html"},
+    {tag:"Earnings",date:"Jul 29",entity:"Procter & Gamble (PG)",
+     summary:"P&G closed fiscal 2026 with net sales up 3% and organic sales up 1%, and outlined ~$15B of FY26 capital returns ($10B dividends, $5B buybacks) alongside a restructuring targeting up to 7,000 non-manufacturing roles.",
+     source:"P&G via SEC",url:"https://www.sec.gov/Archives/edgar/data/0000080424/000008042426000093/fy2526q4amj8-kexhibit991.htm"},
+    {new:true,tag:"Pricing",date:"Aug 25",entity:"Containerboard · N. America",
+     summary:"North American containerboard prices held flat in August for a second straight month per Fastmarkets RISI — a key packaging-and-materials read — while solid bleached sulfate boxboard ticked up $20/ton ahead of September increases.",
+     source:"Packaging Dive",url:"https://www.packagingdive.com/news/august-2026-containerboard-fiber-pricing-fastmarkets-risi-price-increase-producers/828679/"},
+    {new:true,tag:"Trade / Tariffs",date:"Aug 25",entity:"Aluminum & Steel",
+     summary:"Canada's retaliatory tariff package targets US aluminum and steel, threatening to raise input costs for beverage-can and rigid-packaging makers already navigating tariff-driven metal inflation.",
+     source:"CNBC",url:"https://www.cnbc.com/2026/08/24/stock-market-today-live-updates.html"},
+    {new:true,tag:"Outlook",date:"Aug 25",entity:"Greif (GEF)",
+     summary:"Greif's CEO used a new interview to lay out the company's 2026 outlook and long-term strategy while navigating a stubborn industrial recession weighing on packaging demand.",
+     source:"Packaging Dive",url:"https://www.packagingdive.com/"},
+    {new:true,tag:"Earnings",date:"Aug 25",entity:"Smurfit Westrock (SW)",
+     summary:"Smurfit Westrock's latest quarter showed adjusted EPS down roughly 20% despite higher revenue, even as analysts largely stayed constructive on the back of recent price increases.",
+     source:"Yahoo Finance",url:"https://finance.yahoo.com/quote/SW/"},
+    {tag:"M&A",date:"Aug 19",entity:"HarperLove · ChromaScape",
+     summary:"HarperLove agreed to acquire ChromaScape's corrugated products business, one of several bolt-on deals as packaging M&A activity picks back up across the value chain.",
+     source:"Packaging Dive",url:"https://www.packagingdive.com/"},
+    {tag:"Strategy",date:"Aug 7",entity:"Whirlpool / Electrolux",
+     summary:"Appliance makers are splitting on tariffs: Electrolux is handing much of its North American manufacturing to Midea joint ventures while Whirlpool doubles down on US plants as a competitive moat.",
+     source:"Fred's Appliance Academy",url:"https://academy.fredsappliance.com/news/appliance-industry-2026-q2-results/"},
+  ],
+  electronics:[
+    {top:true,new:true,tag:"Product Launch",date:"Aug 25",entity:"Garmin (GRMN)",
+     summary:"Garmin used a rare dedicated 'Play Harder' livestream to unveil its Fenix 9 and Fenix 9 Pro flagship outdoor/fitness watches (with an Enduro 4 and satellite tiers expected) — the day's biggest consumer-electronics launch and a marquee moment for its Outdoor division.",
+     source:"the5krunner",url:"https://the5krunner.com/2026/08/22/garmin-august-25-livestream/"},
+    {new:true,tag:"Earnings Ahead",date:"Aug 26",entity:"Best Buy (BBY)",
+     summary:"Electronics retailer Best Buy is set to report Q2 results Thursday, a closely watched bellwether for discretionary consumer-electronics demand heading into back-to-school and the holidays.",
+     source:"StockStory / FinancialContent",url:"https://markets.financialcontent.com/stocks/article/stockstory-2026-8-26-best-buy-bby-q2-earnings-report-preview-what-to-look-for"},
+    {tag:"Strategy",date:"Aug 15",entity:"IFA Berlin 2026",
+     summary:"Pre-show coverage for IFA Berlin (Sept 4–8) is ramping, with Samsung, Xiaomi, Withings and Ultrahuman confirmed and on-device AI expected to be the dominant theme across appliances and wearables.",
+     source:"Gadgets & Wearables",url:"https://gadgetsandwearables.com/2026/08/15/ifa-2026-wearable-tech-preview/"},
+    {tag:"Marketing",date:"Aug 12",entity:"LG Electronics",
+     summary:"LG launched its 2026 'Life's Good — Free up your mind' brand campaign, centering AI features across its consumer-electronics and home-appliance lineup.",
+     source:"PR Newswire",url:"https://www.prnewswire.com/news-releases/consumer-technology-latest-news/consumer-electronics-list/?page=2&pagesize=50"},
+    {tag:"Product",date:"Jul 30",entity:"Sonos (SONO)",
+     summary:"Sonos teased new product announcements for September and signaled an AI-centric smart-home strategy under CEO Tom Conrad, betting the payoff lies in whole-home hardware and connectivity.",
+     source:"Engadget",url:"https://www.engadget.com/2227306/sonos-ai-product-event-september-2026/"},
+  ],
+};
+
+const navEl=document.getElementById('navlinks');
+const panelsEl=document.getElementById('panels');
+let total=0;
+
+SUBSECTORS.forEach((s,i)=>{
+  const items=NEWS[s.id]||[];
+  total+=items.length;
+
+  const btn=document.createElement('button');
+  btn.className='nav-link'+(i===0?' active':'');
+  btn.id='nav-'+s.id;
+  btn.innerHTML='<span>'+s.label+'</span><span class="cnt">'+items.length+'</span>';
+  btn.addEventListener('click',()=>select(i));
+  navEl.appendChild(btn);
+
+  const panel=document.createElement('section');
+  panel.className='panel'+(i===0?' active':'');
+  panel.id='panel-'+s.id;
+  const newCount=items.filter(x=>x.new).length;
+  panel.innerHTML=
+    '<div class="section-head"><h2>'+s.label+'</h2>'+
+    '<span class="kick">'+items.length+' stories · '+newCount+' new in last 24h</span>'+
+    '<span class="line"></span></div>'+
+    '<div class="grid">'+items.map(n=>cardHTML(n,s.label)).join('')+'</div>';
+  panelsEl.appendChild(panel);
+});
+document.getElementById('totaltag').textContent=total+' stories';
+
+function cardHTML(n,sectionLabel){
+  const cls='card'+(n.top?' top':'');
+  const dateCls='date'+(n.new?' new':'');
+  const head=n.top
+    ?'<span class="ribbon">Top story — '+sectionLabel+'</span><div class="card-top"><span class="tag">'+n.tag+'</span><span class="'+dateCls+'">'+n.date+'</span></div>'
+    :'<div class="card-top"><span class="tag">'+n.tag+'</span><span class="'+dateCls+'">'+n.date+'</span></div>';
+  return '<a class="'+cls+'" href="'+n.url+'" target="_blank" rel="noopener noreferrer">'+head+
+    (n.entity?'<div class="entity">'+n.entity+'</div>':'')+
+    '<p class="summary">'+n.summary+'</p>'+
+    '<div class="card-foot"><span class="source">'+n.source+'</span><span class="readmore">Read →</span></div></a>';
+}
+
+const navButtons=[...navEl.querySelectorAll('.nav-link')];
+const panels=[...panelsEl.querySelectorAll('.panel')];
+function select(idx){
+  navButtons.forEach((b,i)=>b.classList.toggle('active',i===idx));
+  panels.forEach((p,i)=>p.classList.toggle('active',i===idx));
+  document.querySelector('.content').scrollTop=0;
+}
+</script>
+</body>
+</html>
