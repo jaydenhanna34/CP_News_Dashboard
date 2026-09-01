@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Consumer Products News & Trends — August 31, 2026</title>
+<title>Consumer Products News & Trends — September 1, 2026</title>
 <style>
   :root{
     --ap-navy:#032E45;
@@ -114,7 +114,7 @@
       <div class="bh-title">Consumer Products News &amp; Trends</div>
       <div class="bh-meta">
         <span class="bh-aud">Daily Brief</span>
-        <span class="bh-tag">August 31, 2026</span>
+        <span class="bh-tag">September 1, 2026</span>
         <span class="bh-tag">5 subsectors</span>
         <span class="bh-tag" id="totaltag">— stories</span>
       </div>
@@ -134,65 +134,44 @@ const SUBSECTORS=[
 
 const NEWS={
   food:[
-    {top:true,kind:"trend",tag:"Antitrust",date:"Aug 28",entity:"Meat Processing · Cargill, Tyson Foods, JBS USA, National Beef",
-     summary:"President Trump said he will direct legal documents to let ranchers and farmers process and sell their own meat, aiming to \"break\" the roughly 85% market share held by the four largest packers — Cargill, Tyson Foods, JBS USA and National Beef — as the average price of ground beef hit $6.89 a pound.",
-     source:"Cowboy State Daily",url:"https://cowboystatedaily.com/2026/08/28/trump-moves-to-allow-ranchers-and-farmers-to-process-and-sell-their-own-food/"},
-    {kind:"trend",tag:"Recall",date:"Aug 28",entity:"Cyclospora Outbreak · Taylor Farms de Mexico",
-     summary:"The CDC's Cyclospora outbreak tied to Taylor Farms de Mexico's recalled iceberg lettuce grew to 11,458 illnesses across 20 states, including 495 hospitalizations and two deaths in Michigan, though the FDA said the last reported illness onset was Aug. 15 and the recalled lettuce is off the market.",
-     source:"Food Trade News",url:"https://foodtradenews.com/2026/08/28/cyclospora-outbreak-update-case-count-tops-11400-and-expands-to-20-states/"},
-    {kind:"company",tag:"Investigation",date:"Aug 27",entity:"PepsiCo (PEP), Kraft Heinz (KHC)",
-     summary:"Texas Attorney General Ken Paxton issued civil investigative demands to PepsiCo's Siete Foods, Kraft Heinz's Primal Kitchen and Chosen Foods after a UC Davis study found 89% of processed foods labeled \"made with avocado oil\" contained undisclosed seed oils; Primal Kitchen said it takes the findings \"very seriously.\"",
-     source:"Food Dive",url:"https://www.fooddive.com/news/texas-avocado-oil-investigation-pepsico-siete-kraft-heinz-primal-kitchen/828978/"},
-    {kind:"company",tag:"Recall",date:"Aug 29",entity:"Ron's Home Style Foods",
-     summary:"Ron's Home Style Foods recalled 5-lb containers of Pico de Gallo and Salsa Autentica distributed to Arkansas, Oklahoma and Texas after determining the products were made with jalapeño peppers that may be contaminated with Salmonella.",
-     source:"eFoodAlert",url:"https://efoodalert.com/2026/08/29/recalls-and-alerts-august-29-2026/"},
+    {top:true,kind:"trend",tag:"Regulation",date:"Sep 1",entity:"Sprout Outbreak Investigation · FDA",
+     summary:"The FDA said the seed supplier at the center of a multistate E. coli and Salmonella sprout outbreak has refused to issue a recall or notify its downstream customers despite the agency's recommendation, as Everything Sprouts expanded its recall to a fourth product, Robust Radish Sprout Mix.",
+     source:"Food Safety News",url:"https://www.foodsafetynews.com/2026/09/another-sprout-product-under-recall-seed-supplier-refuses-to-issue-recall/"},
+    {kind:"company",tag:"Recall",date:"Sep 1",entity:"Fish Skin Crackers · FSIS Import Recall",
+     summary:"FSIS recalled several catfish (Pangasius) skin cracker products, including Crispy Fish Skin Crackers and Un Chi Crisp Fish Skin, after determining they were produced in China, a country ineligible to export the fish species to the U.S., a violation discovered during routine import surveillance.",
+     source:"Food Safety News",url:"https://www.foodsafetynews.com/2026/09/catfish-skin-products-recalled-because-of-ineligible-import-status/"},
+    {kind:"company",tag:"Recall",date:"Aug 31",entity:"LMSI LLC / Kofinas Olive Oil",
+     summary:"Kofinas Olive Oil voluntarily recalled its Garlic Mediterranean-infused extra virgin olive oil in 100ml, 250ml and 500ml bottles after determining the product was made with a garlic essential oil not approved for culinary use; no illnesses have been reported.",
+     source:"FDA",url:"https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts/lmsi-llckofinas-olive-oil-issues-voluntary-recall-its-garlic-mediterranean-infused-extra-virgin"},
+    {kind:"company",tag:"Recall",date:"Aug 31",entity:"Crystal Temptations",
+     summary:"Crystal Temptations recalled its Halloween Chocolatey Eyeballs candy, sold in 7-to-16-oz. packages, after determining the product contains undeclared milk (whey) not listed on the label.",
+     source:"eFoodAlert",url:"https://efoodalert.com/2026/08/31/recalls-and-alerts-august-30-31-2026/"},
   ],
   beverage:[
-    {top:true,kind:"company",tag:"Product Launch",date:"Aug 31",entity:"Silver Oak Cellars",
-     summary:"Silver Oak released \"Joyful Kaleidoscope,\" a limited-edition bottling of its 2022 Alexander Valley Cabernet Sauvignon featuring artwork by designer Sean Wotherspoon — the winery's first artist-designed label in more than 50 years — going on sale Aug. 31 through its website in a run of just 480 bottles.",
-     source:"BevNET",url:"https://www.bevnet.com/pr/2026/08/27/sean-wotherspoon-reimagines-a-california-classic-for-silver-oak"},
-    {kind:"company",tag:"Product Launch",date:"Aug 27",entity:"Buzzard's Roost Distillery",
-     summary:"Buzzard's Roost released a new French Double Oak Bourbon, a 7-year-old whiskey finished for 18 months in French Limousin oak and bottled at 52.5% ABV, priced at $85 and sold through the distillery's website and Whiskey Row tasting room after the prior batch sold out in 2025.",
-     source:"BevNET",url:"https://www.bevnet.com/pr/2026/08/27/buzzards-roosts-newest-french-double-oak-bourbon-speaks-the-language-of-love"},
-    {kind:"company",tag:"Marketing",date:"Aug 27",entity:"PepsiCo (PEP) · Pure Leaf",
-     summary:"PepsiCo's Pure Leaf Iced Tea launched a \"Game Changer\" campaign with tennis star Amanda Anisimova promoting the value of taking breaks, including a surprise \"Break Conference\" for the player and a New York City sampling activation near Bryant Park.",
-     source:"PR Newswire",url:"https://www.prnewswire.com/news-releases/pure-leaf-iced-tea-teams-up-with-tennis-star-amanda-anisimova-to-show-how-breaks-can-be-a-game-changer-302860600.html"},
+    {top:true,kind:"company",tag:"Product Launch",date:"Aug 31",entity:"Nirvana",
+     summary:"Nirvana launched a new ready-to-drink lane of sparkling coconut water cocktails, pitching a \"functional indulgence\" positioning against traditional malt-based seltzers as it expands into Florida retail and hospitality channels.",
+     source:"BevNET",url:"https://www.bevnet.com/pr/2026/08/31/nirvana-builds-a-new-rtd-lane-with-sparkling-coconut-water-cocktails"},
+    {kind:"company",tag:"M&A",date:"Aug 31",entity:"Broad Brook Brewing, Powder Hollow Brewery, Libation Artisan Beverages, Amherst Brewing",
+     summary:"Four Connecticut-area craft beverage makers — Broad Brook Brewing, Powder Hollow Brewery, Libation Artisan Beverages and Amherst Brewing — are joining forces to pour their beers under one roof at Broad Brook's Suffield, Conn. taproom, which will be rebranded The Taproom at Suffield.",
+     source:"Yahoo News",url:"https://www.yahoo.com/news/articles/brewing-joint-venture-7-eleven-185849767.html"},
   ],
   beauty:[
-    {top:true,kind:"company",tag:"Strategy",date:"Aug 31",entity:"Unilever (ULVR)",
-     summary:"Unilever is betting that shedding its food business — set to combine with McCormick into a company in which Unilever will hold a roughly 10% stake — and focusing on beauty, personal care and home products will close a valuation gap with more focused rivals; Unilever trades at 11.5x EV/core earnings versus 14.8x for Procter & Gamble and 17.5x for L'Oréal.",
-     source:"Cyprus Mail",url:"https://cyprus-mail.com/2026/08/31/unilever-seeks-higher-valuation-multiple-through-beauty-and-personal-care-focus"},
-    {kind:"company",tag:"Earnings",date:"Aug 27",entity:"Ulta Beauty (ULTA)",
-     summary:"Ulta Beauty reported fiscal Q2 net sales up 8.9% to $3.0 billion and EPS of $6.55, beating estimates, then raised full-year EPS guidance to $28.70–$29.00 and lifted planned fiscal 2026 share repurchases to $1.8 billion from $1.5 billion, citing comp sales growth and the Space NK acquisition.",
-     source:"Ulta Beauty Investor Relations",url:"https://www.ulta.com/investor/news-events/press-releases/detail/234/ulta-beauty-announces-second-quarter-fiscal-2026-results"},
-    {kind:"company",tag:"Product Launch",date:"Aug 28",entity:"Kayali",
-     summary:"Kayali launched its first Yum Lip & Body Collection globally on Aug. 28, translating its bestselling Yum Boujee Marshmallow and Yum Pistachio Gelato gourmand fragrances into Cashmere Kiss lip balms and Silk Soufflé body creams, sold on Kayali.com and Sephora.com.",
-     source:"WWD",url:"https://wwd.com/beauty-industry-news/fragrance/kayali-body-care-yummy-pistachio-marshmallow-lip-1239128561/"},
+    {top:true,kind:"company",tag:"Product Launch",date:"Sep 1",entity:"Guerlain (LVMH)",
+     summary:"Guerlain relaunched L'Heure Bleue as a modern amber floral gourmand developed with IFF — the brand's first new feminine fragrance in a decade — priced at $145 for 50ml and now available across Guerlain's e-commerce sites.",
+     source:"L'Officiel USA",url:"https://www.lofficielusa.com/beauty/guerlain-lheure-bleue-fragrance-launch-notes-description-iris-tincture-delphine-jelk-interview-quotes"},
+    {kind:"company",tag:"Product Launch",date:"Sep 1",entity:"Soulstice · Nancy Twine",
+     summary:"Briogeo founder Nancy Twine launched Soulstice, a direct-to-consumer, masstige-priced hair care line averaging $20 per product — 35% to 50% below prestige hair care pricing — marking her return to the category after selling Briogeo to Wella Co.",
+     source:"WWD",url:"https://wwd.com/beauty-industry-news/beauty-features/briogeo-founder-nancy-twine-to-launch-new-hair-care-brand-1239144988/"},
   ],
   household:[
-    {top:true,kind:"trend",tag:"Category Data",date:"Aug 31",entity:"Youth Sports Equipment · Circana",
-     summary:"Circana reported US junior team sports equipment sales reached $1.6B in the 12 months ended July 2026, up 3% year over year even as unit sales fell 3%, as average selling prices rose 7%; 41% of parents cited cost as the top barrier to participation amid tariff-driven pricing pressure on manufacturers.",
-     source:"GlobeNewswire",url:"https://www.globenewswire.com/news-release/2026/08/31/3353420/0/en/us-consumers-are-spending-on-youth-team-sports-equipment-amid-rising-costs-according-to-circana.html"},
-    {kind:"company",tag:"Recall",date:"Aug 31",entity:"Conair (Cuisinart)",
-     summary:"Conair expanded its recall of Cuisinart metal-wire grill brushes to roughly 3.6 million units combined, after receiving 54 reports of bristles detaching — including three consumers who swallowed bristles and sought medical treatment — adding to a broader wave of grill-brush recalls across the industry this year.",
-     source:"WBIW",url:"https://www.wbiw.com/2026/08/31/cuisinart-expands-grill-brush-recall-to-3-6-million-units-amid-industry-wide-safety-reckoning/"},
-    {kind:"company",tag:"Exec Change",date:"Aug 31",entity:"Kontoor Brands (KTB) · Helly Hansen",
-     summary:"Kontoor Brands' Helly Hansen named former Arc'teryx executive C.J. King as General Manager of its North America Sport business, effective Aug. 31, with analysts saying the hire lends \"greater credibility\" to Helly Hansen's push to grow its under-penetrated U.S. business.",
-     source:"Retail Dive",url:"https://www.retaildive.com/news/arcteryx-vet-lead-helly-hansen-avon-north-america-acquired/829028/"},
-    {kind:"company",tag:"Marketing",date:"Aug 27",entity:"Whirlpool Corporation (WHR)",
-     summary:"Whirlpool launched a sweepstakes marking 115 years in American homes, inviting consumers to submit photos of Whirlpool, KitchenAid, JennAir, Maytag, Amana or InSinkErator products for a chance to win one of 115 new appliances, as the company touts its status as the only American-owned major kitchen and laundry appliance maker.",
-     source:"Whirlpool Newsroom",url:"https://whirlpool.mediaroom.com/2026-08-27-Whirlpool-Corporation-Celebrates-115-Years-in-Americas-Homes-Share-Your-Whirlpool-Memory-for-the-Chance-to-Win-a-New-Appliance"},
   ],
   packaging:[
-    {top:true,kind:"trend",tag:"Category Data",date:"Aug 31",entity:"Pharmaceutical Packaging Market · Amcor, Gerresheimer, Schott",
-     summary:"A newly published market report forecasts the global pharmaceutical packaging market growing from $188.4B in 2026 to $436.5B by 2036, an 8.8% CAGR, citing rising biologics and injectable-therapy volumes and tightening product-integrity regulations, with Amcor, Gerresheimer and Schott among more than 55 manufacturers profiled.",
-     source:"GlobeNewswire",url:"https://www.globenewswire.com/news-release/2026/08/31/3353365/28124/en/pharmaceutical-packaging-market-report-2026-2036-now-available-forecasts-market-growth-from-188-4b-2026-to-436-5b-by-2036-profiling-amcor-gerresheimer-schott-and-53-other-key-playe.html"},
-    {kind:"trend",tag:"Regulation",date:"Aug 27",entity:"Extended Producer Responsibility · Oregon",
-     summary:"A federal judge upheld Oregon's Plastic Pollution and Recycling Modernization Act in full, rejecting a constitutional challenge from the National Association of Wholesaler-Distributors in the first federal court decision to sustain a state EPR packaging law against such an attack.",
-     source:"Waste Dive",url:"https://www.wastedive.com/news/oregon-epr-law-naw-constitution-judge-ruling/829044/"},
-    {kind:"company",tag:"Capital",date:"Aug 27",entity:"Rondo Ganahl",
-     summary:"Rondo Ganahl invested roughly €6 million to double moulded-fiber production capacity at its Frastanz, Austria plant, adding a new production line to meet rising demand for paper-based packaging.",
-     source:"Packaging Journal",url:"https://packaging-journal.de/rondo-verdoppelt-kapazitaet-mit-neuer-fasergussanlage/"},
+    {top:true,kind:"company",tag:"Product Launch",date:"Aug 31",entity:"Stahl",
+     summary:"Stahl introduced Sensora, an expanded portfolio of haptic coatings for paper, board and flexible packaging that add soft-touch, velvety, silky and textured finishes for folding cartons, labels, cosmetics and luxury packaging, debuting at the Loupe Americas 2026 trade show.",
+     source:"Coatings World",url:"https://www.coatingsworld.com/breaking-news/stahl-introduces-sensora-haptic-coatings/"},
+    {kind:"company",tag:"Product Launch",date:"Aug 31",entity:"IST (IST Metz)",
+     summary:"IST launched swap4cure at Loupe Americas 2026, a modular platform that lets converters switch between UV, LED UV and thermal curing on the same line, including an AI-assisted \"Smartcure\" system that determines the optimal UV dose for each print job.",
+     source:"Labels & Labeling",url:"https://www.labelsandlabeling.com/news/loupe-formerly-labelexpo/ist-launch-swap4cure-loupe"},
   ],
 };
 
